@@ -1,10 +1,10 @@
 #!/bin/bash
+cd /home/bryan
 gsutil cp gs://bucket-start-files/salesdb-final.zip .
 unzip salesdb-final.zip
-USUARIO=$(whoami)
+USUARIO=bryan
 BASE_DE_DATOS=$(ls -d */)
 cd $BASE_DE_DATOS
-hdfs dfs -mkdir -p /user/
 DIRECTORIOS=$(ls)
 DIRECTORIOS=$(echo "${DIRECTORIOS//.csv/}")
 DIRECTORIOS=($DIRECTORIOS)
