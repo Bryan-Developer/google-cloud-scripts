@@ -9,4 +9,3 @@ DIRECTORIOS=$(ls)
 DIRECTORIOS=$(echo "${DIRECTORIOS//.csv/}")
 DIRECTORIOS=($DIRECTORIOS)
 for i in "${DIRECTORIOS[@]}"; do hdfs dfs -mkdir -p /user/$USUARIO/$BASE_DE_DATOS/$i; done
-hdfs dfs -ls -R /user/$USUARIO
